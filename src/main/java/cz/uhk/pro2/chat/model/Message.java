@@ -3,11 +3,19 @@ package cz.uhk.pro2.chat.model;
 import java.time.LocalDateTime;
 
 public class Message {
-    private String from, msg;
-    private LocalDateTime time;
+    private String from, msg, to;
+    private LocalDateTime dateTime;
 
     public String getFrom() {
         return from;
+    }
+
+    // constructor
+    public Message(String from, String msg, String to) {
+        this.from = from;
+        this.msg = msg;
+        this.to = to;
+        this.dateTime = dateTime;
     }
 
     public void setFrom(String from) {
@@ -22,11 +30,19 @@ public class Message {
         this.msg = msg;
     }
 
-    public LocalDateTime getTime() {
-        return time;
+    public LocalDateTime getDateTime() {
+        return dateTime;
     }
 
-    public void setTime(LocalDateTime time) {
-        this.time = time;
+    public void setDateTime(LocalDateTime dateTime) {
+        this.dateTime = dateTime;
+    }
+
+    public String getTo() {
+        return to;
+    }
+
+    public void setTo(String to) {
+        this.to = to;
     }
 }
