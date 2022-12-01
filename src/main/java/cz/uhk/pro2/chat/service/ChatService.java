@@ -15,9 +15,29 @@ public interface ChatService {
 
     // HW - dodelat dokumentacni komentare
     boolean login(String username, String password);
+    /**
+     * Send message to the room
+     * @param message
+     * @param roomId
+     */
     void sendMessage(Message message, int roomId);
+    /**
+     * Search for messages in the room
+     * @param term
+     * @param roomId
+     * @return
+     */
     List<Message> search(String term, int roomId);
+    /**
+     * Get all messages in the room
+     * @param roomId
+     * @return
+     */
     List<Message> getMessages(int roomId);
+    /**
+     * Get all rooms
+     * @return
+     */
     List<Room>getAllRooms();
     
 }
