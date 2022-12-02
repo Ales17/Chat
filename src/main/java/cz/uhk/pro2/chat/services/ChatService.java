@@ -1,4 +1,4 @@
-package cz.uhk.pro2.chat.service;
+package cz.uhk.pro2.chat.services;
 
 import cz.uhk.pro2.chat.model.Message;
 import cz.uhk.pro2.chat.model.Room;
@@ -13,7 +13,7 @@ public interface ChatService {
      * @return true if login was successful, false otherwise
      */
 
-    // HW - dodelat dokumentacni komentare
+    // HW - TODO DOCUMENTATION COMMENTS
     boolean login(String username, String password);
     /**
      * Send message to the room
@@ -29,14 +29,15 @@ public interface ChatService {
      */
     List<Message> search(String term, int roomId);
     /**
-     * Get all messages in the room
-     * @param roomId
-     * @return
-     */
-    List<Message> getMessages(int roomId);
+        * Get all messages of the user in the room
+        * @param roomId
+        * @return list of messages
+        */
+
+    List<Message> getMyMessages(int roomId);
     /**
      * Get all rooms
-     * @return
+     * @return list of rooms
      */
     List<Room>getAllRooms();
     

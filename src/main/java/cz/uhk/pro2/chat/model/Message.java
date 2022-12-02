@@ -11,12 +11,11 @@ public class Message {
     }
 
     // constructor
-    public Message(String from, String msg, String to) {
+    public Message(String from, String msg, String to, LocalDateTime localDateTime) {
         this.from = from;
         this.msg = msg;
         this.to = to;
-        this.dateTime = dateTime;
-    }
+        this.dateTime = localDateTime;}
 
     public void setFrom(String from) {
         this.from = from;
