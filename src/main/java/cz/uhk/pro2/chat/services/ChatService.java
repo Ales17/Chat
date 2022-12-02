@@ -19,14 +19,16 @@ public interface ChatService {
      * Send message to the room
      * @param message
      * @param roomId
+     * @return true if message was sent, false otherwise
      */
     void sendMessage(Message message, int roomId);
     /**
      * Search for messages in the room
      * @param term
      * @param roomId
-     * @return
+     * @return list of messages
      */
+
     List<Message> search(String term, int roomId);
     /**
         * Get all messages of the user in the room
